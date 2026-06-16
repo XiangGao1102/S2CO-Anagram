@@ -11,7 +11,7 @@ from typing import Optional, Callable
 import math
 
 
-def horizontal_flip_transformation():
+def vertical_flip_transformation():
     
     def horizontal_flip(tensor):
         # tensor: b, c, h, w
