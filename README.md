@@ -13,5 +13,5 @@ Our method synchronously denoises two latent views linked by a specified transfo
 on this process, a novel optimization framework comprising null-text structure alignment, semantic enhancement, and attention-guided noise fusion is proposed to enhance the generated results.
 
 # Results
-![](imgs/results.jpg "example results")
+![](imgs/qualitative_res.jpg "example results")
 Visual anagram synthesis results of our S2CO-Anagram using different transformation functions g(·) with keywords in each text prompt highlighted in red. 
