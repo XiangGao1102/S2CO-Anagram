@@ -135,31 +135,28 @@ def low_pass_DCT_filtering(latents, lp_percentile):
     return latents
 
 
-def brightness_contrast_adjust(image, brightness=0, contrast=0):
+def brightness_contrast(image, brightness=0, contrast=0):
     """
-    parameters:
-    - image: input numpy image
-    - brightness: (-100, 100)
-    - contrast: (-100, 100)
+    parameter:
+        image: numpy array
+        brightness: -150 to 150
+        contrast:   -50 to 100
     return:
-    - adjusted image
+        adjusted numpy array
     """
-    
-    if image.dtype == np.uint8:
-        img_float = image.astype(np.float32) / 255.0
-    else:
-        img_float = image.copy().astype(np.float32)
-        if img_float.max() > 1.0:
-            img_float = img_float / 255.0
-    
-    brightness_val = brightness / 100.0
-    contrast_val = contrast / 100.0
-    
-    # 公式: result = (img - 0.5) * (1 + contrast) + 0.5 + brightness
-    result = (img_float - 0.5) * (1 + contrast_val) + 0.5 + brightness_val
-    
-    result = np.clip(result, 0, 1)
-    return (result * 255).astype(np.uint8)
+    brightness_255 = brightness * 255 / 150
+    contrast_delta = contrast / 100  # [-0.5, 1.0]
+
+    img_array = np.array(image, dtype=np.float32)
+
+    for c in range(3):
+        channel = img_array[:, :, c]
+        mean = np.mean(channel)
+        channel = mean + (channel - mean) * (1 + contrast_delta)
+        channel = channel + brightness_255
+        img_array[:, :, c] = np.clip(channel, 0, 255)
+
+    return img_array.astype(np.uint8)
 
 
 
