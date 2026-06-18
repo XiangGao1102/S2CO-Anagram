@@ -12,6 +12,12 @@ Visual anagram is an intriguing form of art creation wherein a single image pres
 Our method synchronously denoises two latent views linked by a specified transformation followed by fusing their noise estimations at each denoising step. Grounding
 on this process, a novel optimization framework comprising null-text structure alignment, semantic enhancement, and attention-guided noise fusion is proposed to enhance the generated results.
 
+# Run the code
+We use Python 3.9.23, Pytorch 2.7.0. Our code runs on Jupyter Notebook, use the command below to launch the program:
+<pre><code>
+jupyter notebook S2CO-Anagram.ipynb
+</code></pre>
+
 # Results
 ![](imgs/qualitative_res.jpg "example results")
 Visual anagram synthesis results of our S2CO-Anagram using different transformation functions g(·) with keywords in each text prompt highlighted in red. 
