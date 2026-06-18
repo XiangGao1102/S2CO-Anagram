@@ -16,5 +16,6 @@ on this process, a novel optimization framework comprising null-text structure a
 ![](imgs/qualitative_res.jpg "example results")
 Visual anagram synthesis results of our S2CO-Anagram using different transformation functions g(·) with keywords in each text prompt highlighted in red. 
 
+# Diverse Generation Results
 ![](imgs/diversity.jpg "diverse generation results")
 Diverse results with fixed text prompts (P1, P2) is enabled by varying the initial noise latent.
