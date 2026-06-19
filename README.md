@@ -1,7 +1,7 @@
 # Structure-Semantic Co-optimized Latent Diffusion Model for Fast Visual Anagram Synthesis
 [NeurIPS 2026] Official code of the paper "Structure-Semantic Co-optimized Latent Diffusion Model for Fast Visual Anagram Synthesis". [Paper link](https://arxiv.org/pdf/2606.16241)
 
-# ![](imgs/teaser.jpg "teaser")
+# ![](imgs/teaser_img.jpg "teaser")
 Our method enables fast synthesis of high-quality visual anagram images that conceptually conform to different text prompts after undergoing a transformation such as flipping and rotation, offering artists and designers an efficient tool to create optical illusion visual arts.
 
 # Introduction
